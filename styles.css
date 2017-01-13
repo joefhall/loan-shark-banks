@@ -1,80 +1,47 @@
 
-html, body { background-color: #8ce4f2; color: #333333; height: 100%; margin: 0; padding: 0; }
+html, body { background-color: #fcf8c7; color: #333333; height: 100%; margin: 0; padding: 0; }
 
-body { font-family: 'Nunito Sans', sans-serif; font-size: 18px; /* Fix for iframes sizing wrongly on iPhone Safari */ width: 1px; min-width: 100%; *width: 100%; }
-
-h1 { font-family: 'Bevan', sans-serif; font-size: 55px; font-weight: 400; letter-spacing: -2px; line-height: 50px; margin-top: 10px; margin-bottom: 0; }
+body { font-family: 'Nunito Sans', sans-serif; font-size: 18px; /* Fix for iframes sizing wrongly on iPhone Safari */ width: 1px; min-width: 100%; *width: 100%; text-align: center; }
 
 a:link, a:visited, a:hover, a:active { color: #ff3333; text-decoration: underline; }
 
-input, textarea { display: block; font-family: 'Nunito Sans', sans-serif; margin-top: 5px; margin-bottom: 5px; padding: 5px; color: #222255; font-size: 18px; border: none; }
+input, textarea { display: inline; font-family: 'Nunito Sans', sans-serif; margin-top: 5px; margin-bottom: 5px; padding: 5px; color: #222255; font-size: 18px; border: none; }
 
 input[type=text], input[type=password], textarea { border: solid 1px #eee; }
 
-#workinprogress { border: dashed 1px white; background-color: #18af1d; padding: 10px; margin-bottom: 10px; color: white; text-align: center; }
-#workinprogress strong { font-weight: bolder; }
+h1 { font-family: 'Bevan', sans-serif; font-size: 60px; font-weight: 500; letter-spacing: -2px; line-height: 50px; margin-top: 10px; margin-bottom: 0; text-align: center; margin: 0; margin-top: 30px; color: #f10e0e; }
+h2 { font-family: 'Bevan', sans-serif; font-size: 25px; font-weight: normal; letter-spacing: -2px; line-height: 30px; margin-top: 10px; margin-bottom: 0; text-align: center; margin: 0; margin-bottom: 30px; color: white; }
+#titles h1, #titles h2 { text-shadow: rgb(3, 3, 3) 4px 4px 4px; }
 
-#pagecontent { text-align: center; width: 100%; }
-#maincontent { display: inline-block; text-align: left; width: 100%; max-width: 650px; overflow: hidden; padding: 10px; margin-bottom: 30px; }
+.holder { text-align: left; width: 100%; max-width: 650px; padding: 10px; margin: 0 auto; padding-bottom: 30px; padding-top: 30px;  }
 
-#examplevideos { margin-top: 15px; font-size: 14px; color: #17b6cf; text-align: right; }
-#examplevideos video { width: 100%; height: 416px; margin-top: -28px; }
-@media (max-width: 720px) { 
-	#examplevideos video { height: 320px; margin-top: 0; }
-}
-@media (max-width: 320px) { 
-	#examplevideos video { height: 180px; margin-top: 0; }
-}
+#titles { background: url(images/banker2.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+
+#getstarted { text-align: center; }
+#getstarted h2 { color: #f10e0e; }
+#postcode { width: 200px; padding: 12px; padding-left: 15px; padding-right: 15px; font-size: 18px; }
+#postcodeerror { font-size: 12px; color: #999; }
+#getstarted form { text-align: center; }
+#getstarted button { -webkit-appearance: none; font-family: 'Bevan', sans-serif; padding: 5px; padding-left: 15px; padding-right: 15px; color: #fff; font-size: 18px; cursor: pointer; border: 0; text-decoration: none; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; margin-right: 10px; line-height: 40px; outline: none; }
+#gobutton { display: inline; background: #f10e0e; }
+#gobutton:disabled { background: #ccc; cursor: not-allowed; }
+
+#mycouncil {}
+
+#explainer { background: url(images/cloudy_sky2.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+#explainer .holder { text-align: center; }
+#explainer h2, #explainer a { color: black; }
+#explainer iframe { margin: 0 auto; }
+
+#about {}
+#about .holder { text-align: center; }
+#logo { display: block; margin-top: 10px; }
+
 .unslider-nav { margin-top: -12px; }
 
 #slidingpanel { width: 1200px; }
 .panel { margin-right: 60px; float: left; width: 350px; padding-left: 5px; padding-right: 5px; margin-right: 50px; }
 
-#theresashead { position: relative; top: 8px; }
-#tips { float: right; margin-top: 50px; margin-left: 20px; margin-bottom: 10px; padding: 20px; border-radius: 10px; background-color: #ffeded; max-width: 370px; color: #7777aa; }
-@media (max-width: 320px) { 
-	#tips { font-size: 14px; max-width: 100px; margin-top: 0; margin-left: 10px; padding: 15px; }
-}
-
-#textentry { position: relative; }
-#textinput { width: 100%; min-height: 100px; border: 1px solid #cccccc; padding: 10px; outline: none; border-radius: 10px; background-color: #ffffff; line-height: 32px; }
-.recognisedword { display: inline; background-color: #D8DFEA; background-image: url(/images/blank_underline.png); border-radius: 2px; padding-left: 3px; padding-right: 3px; }
-.unrecognisedword { display: inline; background: url(/images/underline.gif) bottom repeat-x; padding-left: 3px; padding-right: 3px; }
-#textinput[placeholder]:empty:before {
-    content: attr(placeholder);
-    color: #999; 
-}
-#textinput[placeholder]:empty:focus:before {
-    content: "";
-}
-
-#autocomplete { position: absolute; z-index: 1000; max-height: 85px; overflow-y: scroll; background-color: #eef; width: 150px; padding-top: 0; padding-bottom: 5px; }
-.autocompletematch { padding-left: 7px; padding-right: 10px; }
-.autocompleteselected { background-color: #19cae6; color: white; }
-
-#audiochooser { width: 100%; margin-top: 15px; margin-bottom: 25px; }
-#audiostop { display: none; }
-#audiochooser input { display: none; }
-#audiochooser label { display: inline-block; margin-right: 10px; background: #ffeded; border: 1px solid #cccccc; border-radius: 5px; padding: 10px; }
-#audiochooser input[type="radio"]:checked+label{ background: #ff3333; font-weight: bold; color: white; } 
-
-#videoholder { background: transparent url("/images/loading3.gif") no-repeat fixed center center; min-height: 118px; }
-#thevideo { margin: 0; margin-top: 20px; }
-
-#makevideobutton, #backbutton, #facebookbutton, #twitterbutton, #splitbutton, #deletebutton, #approvebutton, #renamebutton, #prevbutton, #nextbutton, #shavestartbutton, #shaveendbutton { -webkit-appearance: none; font-family: 'Bevan', sans-serif; padding: 5px; padding-left: 15px; padding-right: 15px; color: #fff; font-size: 23px; cursor: pointer; border: 0; text-decoration: none; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; margin-top: 10px; margin-bottom: 15px; margin-right: 10px; line-height: 40px; outline: none; }
-#makevideobutton, #splitbutton, #renamebutton { display: block; width: 200px; background: #ff3333; }
-#approvebutton { display: block; width: 200px; background: green; }
-#shavestartbutton, #shaveendbutton { background: darkblue; }
-#backbutton { display: inline-block; background: #aaaaaa; }
-#facebookbutton { display: inline-block; background: #3b5998; }
-#twitterbutton { display: inline-block; background: #4099FF; }
-#deletebutton { display: block; width: 200px; background: #999999; margin-top: 60px; }
-
-#splitmakerform, #splitvideo, #reviewmakerform, #reviewvideo { margin: 40px; }
-#splitvideo, #reviewvideo { float: right; margin-top: 0; }
-#reviewword { font-weight: bold; font-size: 40px; width: 350px; background-color: rgba(0, 0, 0, 0); border: none; }
-#reviewwordcheck { display: inline; }
-#splitstarthour, #splitstartmin, #splitstartsec, #splitstartframe, #splitendhour, #splitendmin, #splitendsec, #splitendframe { display: inline; width: 35px; }
 
 @media (min-width: 721px) { 
   

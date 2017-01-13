@@ -15,7 +15,7 @@ header('Content-type: text/html; charset=utf-8');
 
 
   <!DOCTYPE html>
-  <html>
+  <html ng-app="loansharkbanksApp" ng-controller="myCtrl">
 
   <head>
 
@@ -30,13 +30,9 @@ header('Content-type: text/html; charset=utf-8');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css?family=Bevan|Nunito+Sans" rel="stylesheet">
-
-    <!-- JQuery -->
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    
-    <!-- JQuery UI -- for Autocomplete -->
-    <script src="jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="jquery-ui.min.css" />
+		
+		<!-- AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
     <!-- Recaptcha used to check person isn't a bot -->
     <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -55,32 +51,75 @@ header('Content-type: text/html; charset=utf-8');
   </head>
 
   <body>
-		
-		<div id="workinprogress">
-			Hi! Welcome to this <strong>work-in-progress development site.</strong> Please bear in mind there's lots more functionality, better design, better messaging and all to be added, and bug fixes to do.
+
+		<div id="titles">
+				<div class="holder">
+					<h1>
+						Loan shark banks
+					</h1>
+					<h2>
+						are crippling our local services with sky-high interest rates we didn&apos;t sign up for and can&apos;t afford.
+					</h2>
+					<h2>
+						They&apos;re profiting every day by taking millions from our local schools, old people&apos;s homes and more.
+					</h2>
+			</div>
 		</div>
-    
-    <div id="pagecontent">
+			
+			<div id="getstarted">
+				<div class="holder">
+					<h2>
+						See how your community is being fleeced
+					</h2>
+					<form name="myForm">
+						<input type="text" id="postcode" name="postcode" ng-model="postcode" placeholder="Enter your postcode" ng-pattern="/^[a-z]{1,2}[0-9][a-z0-9]?\s?[0-9][a-z]{2}$/i" required ng-minlength="5" ng-maxlength="8" ng-change="">
+						<button id="gobutton" ng-click="getCouncilName()" ng-disabled="myForm.postcode.$invalid">Go</button>
+						<div id="postcodeerror" ng-show="myForm.postcode.$dirty && !myForm.postcode.$valid">Please enter your full UK postcode</div>
+					</form>
+				</div>
+			</div>
+			
+			<div id="mycouncil">
+				<div class="holder">
+					<div id="councilname">
+						The impact on {{ council.name }}
+					</div>
+					<div id="amountperyear">
+						&pound;{{ council.interestPerYear }} million
+					</div>
+					<div id="humanexample">
+						That's like {{ council.humanExample }}
+					</div>
+				</div>
+			</div>
 
-      <div id="maincontent">
+			<div id="explainer">
+				<div class="holder">
+					<h2>
+						What&apos;s it all about?
+					</h2>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/y37t8NuPYxQ" frameborder="0" allowfullscreen></iframe>
+					<div id="newsarticles">
+						<a href="http://www.independent.co.uk/news/business/news/sent-loco-by-lobos-the-great-council-loan-controversy-a6922286.html" target="_blank">Read more</a>
+					</div>
+				</div>
+			</div>
 
-        <h1>
-          Loan shark banks are...
-        </h1>
-
-
-        
-
-      </div>
-
-    </div>
-  
+  		<div id="about">
+				<div class="holder">
+					Made for a hackathon in support of 
+					<a href="http://debtresistance.uk/" target="_blank">Debt Resistance UK</a>
+				</div>
+			</div>
     
     <script>
       
       
-      
     </script>
+		
+		<!-- AngularJS -->
+		<script src="app.js"></script>
+		<script src="controller.js"></script>
 
   </body>
 
