@@ -61,7 +61,7 @@ header('Content-type: text/html; charset=utf-8');
 						are crippling our local services with sky-high interest rates we didn&apos;t sign up for and can&apos;t afford.
 					</h2>
 					<h2>
-						They&apos;re profiting every day by taking millions from our local schools, old people&apos;s homes and more.
+						They&apos;re profiting every day by taking millions from our schools, old people&apos;s homes and more.
 					</h2>
 			</div>
 		</div>
@@ -98,7 +98,7 @@ header('Content-type: text/html; charset=utf-8');
 					<h2>
 						What&apos;s it all about?
 					</h2>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/y37t8NuPYxQ" frameborder="0" allowfullscreen></iframe>
+					<iframe src="https://www.youtube.com/embed/y37t8NuPYxQ?showinfo=0" frameborder="0" allowfullscreen></iframe>
 					<div id="newsarticles">
 						<a href="http://www.independent.co.uk/news/business/news/sent-loco-by-lobos-the-great-council-loan-controversy-a6922286.html" target="_blank">Read more</a>
 					</div>
@@ -108,7 +108,7 @@ header('Content-type: text/html; charset=utf-8');
   		<div id="about">
 				<div class="holder">
 					Made for a hackathon in support of 
-					<a href="http://debtresistance.uk/" target="_blank">Debt Resistance UK</a>
+					<a href="http://debtresistance.uk/" target="_blank">Debt Resistance UK.</a> Code freely available at <a href="https://github.com/joefhall/loan-shark-banks" target="_blank">GitHub.</a>
 				</div>
 			</div>
     
