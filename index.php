@@ -63,6 +63,12 @@ header('Content-type: text/html; charset=utf-8');
 					<h2>
 						They&apos;re profiting every day by taking millions from our schools, old people&apos;s homes and more.
 					</h2>
+					<div id="topbanklogos">
+						Featuring 
+						<img src="images/logo_barclays_small_trans.png" alt="Barclays" /> 
+						<img src="images/logo_rbs_small_trans.png" alt="RBS" /> 
+						and more
+					</div>
 			</div>
 		</div>
 			
