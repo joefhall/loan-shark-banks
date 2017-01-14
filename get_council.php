@@ -19,13 +19,45 @@ if (isset($_GET['postcode'])) {
 
   if (isset($json_postcodesio)) { // If not an error connecting to postcodes.io
     $council = $json_postcodesio['result']['admin_district'];
-    echo $council;
   } else {
-    echo "Couldn't find your council, sorry - please check your postcode";
+    $council = "Couldn't find your council, sorry - please check your postcode";
   }
 
 } else {
-  echo "Please enter your postcode";
+  $council = "Please enter your postcode";
 }
+
+
+
+// Get interest per year from database
+
+include_once("database_password.php"); // returns $dbpassword
+$mysqli = new mysqli("localhost", "root", $dbpassword, "councils");
+
+/* check connection */
+if (mysqli_connect_errno()) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
+
+$query = "SELECT annualinterestmillion FROM councils WHERE name = '$council' LIMIT 1";
+
+if ($result = $mysqli->query($query)) {
+
+    /* fetch object array */
+    while ($row = $result->fetch_row()) {
+      $interest = round($row[0], 1);
+    }
+
+    /* free result set */
+    $result->close();
+}
+
+/* close connection */
+$mysqli->close();
+
+$return = json_encode(array($council, $interest));
+
+echo $return;
 
 ?>

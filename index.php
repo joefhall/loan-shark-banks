@@ -38,11 +38,13 @@ header('Content-type: text/html; charset=utf-8');
     <script src='https://www.google.com/recaptcha/api.js'></script>
 		
 		<!-- Unslider -->
+		<!--
 		<script src="unslider/unslider-min.js"></script>
 		<script src="//stephband.info/jquery.event.move/js/jquery.event.move.js"></script>
 		<script src="//stephband.info/jquery.event.swipe/js/jquery.event.swipe.js"></script>
 		<link rel="stylesheet" href="unslider/unslider.css" />
 		<link rel="stylesheet" href="unslider/unslider-dots.css" />
+		-->
 
     <!-- Google Analytics -- add later -->
 		
@@ -85,16 +87,16 @@ header('Content-type: text/html; charset=utf-8');
 				</div>
 			</div>
 			
-			<div id="mycouncil">
+			<div id="mycouncil" ng-show="council.name">
 				<div class="holder">
 					<div id="councilname">
-						The impact on {{ council.name }}
+						The impact on <span id="councilnametext">{{ council.name }}</span>
 					</div>
-					<div id="amountperyear">
-						&pound;{{ council.interestPerYear }} million
+					<div id="amountperyear" ng-show="council.interestPerYear > 0">
+						We&apos;re having to pay <div id="interestamount">&pound;{{ council.interestPerYear }} million</div> interest a year
 					</div>
 					<div id="humanexample">
-						That's like {{ council.humanExample }}
+						{{ council.humanExample.start }} <div id="humaninterestnumber">{{ council.humanExample.number }}</div> {{ council.humanExample.end }}
 					</div>
 				</div>
 			</div>
