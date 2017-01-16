@@ -30,7 +30,8 @@ app.controller('myCtrl', function($scope, $http) {
         $scope.council.humanExample.end = "in our community";
         $scope.elderlycare = true;
       }
-       
+      location.href = "#";
+      location.href = "#seecouncil";
     });
   };
     

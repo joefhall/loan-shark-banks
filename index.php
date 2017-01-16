@@ -85,6 +85,7 @@ header('Content-type: text/html; charset=utf-8');
 						<div id="postcodeerror" ng-show="myForm.postcode.$dirty && !myForm.postcode.$valid">Please enter your full UK postcode</div>
 					</form>
 				</div>
+				<div id="seecouncil"></div>
 			</div>
 			
 			<div id="mycouncil" ng-show="council.name" ng-class="{elderlycare: elderlycare}">
@@ -124,7 +125,7 @@ header('Content-type: text/html; charset=utf-8');
 					<iframe src="https://www.youtube.com/embed/y37t8NuPYxQ?showinfo=0" frameborder="0" allowfullscreen></iframe>
 					<div id="findoutmore">
 							<a href="http://www.independent.co.uk/news/business/news/sent-loco-by-lobos-the-great-council-loan-controversy-a6922286.html" target="_blank">Read more</a> | 
-							<a href="http://lada.debtresistance.uk/" target="_blank">Join the fightback</a>
+							<a href="http://lada.debtresistance.uk/" target="_blank">Do something about it</a>
 					</div>
 				</div>
 			</div>
