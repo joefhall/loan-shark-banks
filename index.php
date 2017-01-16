@@ -131,8 +131,8 @@ header('Content-type: text/html; charset=utf-8');
 
   		<div id="about">
 				<div class="holder">
-					Made for a hackathon in support of 
-					<a href="http://debtresistance.uk/" target="_blank">Debt Resistance UK</a>. Any inaccuracies are my own or come from other volunteers who created the data. Code freely available at <a href="https://github.com/joefhall/loan-shark-banks" target="_blank">GitHub</a> &ndash; please take it, use it and make it better.
+					This is a rough prototype made for a hackathon in support of 
+					<a href="http://debtresistance.uk/" target="_blank">Debt Resistance UK</a> and has not been checked or approved by them. Code freely available at <a href="https://github.com/joefhall/loan-shark-banks" target="_blank">GitHub</a> &ndash; please take it, use it and make it better.
 				</div>
 			</div>
     
