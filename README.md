@@ -15,7 +15,9 @@ As this was for a one-day hackathon, it was only developed to a limited extent. 
 
 - Add a couple more human examples of what the money equates to so it's not only elderly care, e.g. something about children, something everyone uses (libraries or similar?) -- the result could be random or a slider could show you all of them in the results panel
 
-- For each council, show logos
+- For each council, show logos of which banks are lending to them
+
+- Improve how background images display on mobile
 
 - Add Facebook and Twitter sharing -- ideally including creating on-the-fly a preview image with some/all of the results you get when you search for your council (this will be particularly helpful for Facebook sharing where a custom image will encourage clickthroughs)
 
