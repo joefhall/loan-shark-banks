@@ -87,16 +87,31 @@ header('Content-type: text/html; charset=utf-8');
 				</div>
 			</div>
 			
-			<div id="mycouncil" ng-show="council.name">
+			<div id="mycouncil" ng-show="council.name" ng-class="{elderlycare: elderlycare}">
 				<div class="holder">
-					<div id="councilname">
-						The impact on <span id="councilnametext">{{ council.name }}</span>
-					</div>
+					<h2 id="councilname">
+						<span id="councilnametext">{{ council.name }}</span>
+					</h2>
 					<div id="amountperyear" ng-show="council.interestPerYear > 0">
-						We&apos;re having to pay <div id="interestamount">&pound;{{ council.interestPerYear }} million</div> interest a year
+						We&apos;re having to pay loan shark banks
+						<div id="interestamount">&pound;{{ council.interestPerYear }} million a year</div> <strong>in interest alone</strong>
 					</div>
-					<div id="humanexample">
+					<div id="humanexample" ng-show="council.interestPerYear > 0">
 						{{ council.humanExample.start }} <div id="humaninterestnumber">{{ council.humanExample.number }}</div> {{ council.humanExample.end }}
+					</div>
+					<div id="sharing" ng-show="council.interestPerYear > 0">
+						Isn&apos;t that where our money should go?
+					</div>
+					<div id="nodatayet" ng-show="council.interestPerYear == 0">
+						Unfortunately we don&apos;t have data yet for your area. 
+						<div id="nodatasuggestions">
+							<p>
+								Try entering postcode E16 4HP to see an example from elsewhere. 
+							</p>
+							<p>
+								<a href="http://lada.debtresistance.uk/project/based-on-your-expertise/" target="_blank">Get involved in researching loan shark bank loans to your council.</a>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -107,8 +122,9 @@ header('Content-type: text/html; charset=utf-8');
 						What&apos;s it all about?
 					</h2>
 					<iframe src="https://www.youtube.com/embed/y37t8NuPYxQ?showinfo=0" frameborder="0" allowfullscreen></iframe>
-					<div id="newsarticles">
-						<a href="http://www.independent.co.uk/news/business/news/sent-loco-by-lobos-the-great-council-loan-controversy-a6922286.html" target="_blank">Read more</a>
+					<div id="findoutmore">
+							<a href="http://www.independent.co.uk/news/business/news/sent-loco-by-lobos-the-great-council-loan-controversy-a6922286.html" target="_blank">Read more</a> | 
+							<a href="http://lada.debtresistance.uk/" target="_blank">Join the fightback</a>
 					</div>
 				</div>
 			</div>
@@ -116,7 +132,7 @@ header('Content-type: text/html; charset=utf-8');
   		<div id="about">
 				<div class="holder">
 					Made for a hackathon in support of 
-					<a href="http://debtresistance.uk/" target="_blank">Debt Resistance UK.</a> Code freely available at <a href="https://github.com/joefhall/loan-shark-banks" target="_blank">GitHub.</a>
+					<a href="http://debtresistance.uk/" target="_blank">Debt Resistance UK</a>. Any inaccuracies are my own or come from other volunteers who created the data. Code freely available at <a href="https://github.com/joefhall/loan-shark-banks" target="_blank">GitHub</a> &ndash; please take it, use it and make it better.
 				</div>
 			</div>
     

@@ -30,7 +30,17 @@ h2 { font-family: 'Bevan', sans-serif; font-size: 1.45em; font-weight: normal; l
 #gobutton { display: inline; background: #f10e0e; }
 #gobutton:disabled { background: #ccc; cursor: not-allowed; }
 
-#mycouncil {}
+#mycouncil { text-shadow: rgb(3, 3, 3) 2px 2px 4px; }
+#mycouncil h2 { color: black; }
+.elderlycare { background: url(images/elderly_care.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+#amountperyear, #humanexample, #sharing, #nodatayet { font-size: 2em; line-height: 1.4em; font-weight: bold; margin-bottom: 30px; }
+#amountperyear, #nodatayet { color: #f10e0e; }
+#humanexample { color: #0059ff; } 
+#interestamount, #humaninterestnumber { font-family: 'Bevan', sans-serif; font-size: 1.6em; font-weight: normal; }
+#sharing { color: white; }
+#nodatayet { font-size: 1.5em; text-shadow: none; }
+#nodatasuggestions { font-size: 0.7em; color: black; text-shadow: none; }
+#nodatasuggestions p { margin-top: 15px; margin-bottom: 15px; }
 
 #explainer { background: url(images/cloudy_sky2.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 #explainer .holder { text-align: center; }
